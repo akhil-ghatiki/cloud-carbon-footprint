@@ -1,5 +1,15 @@
 # @cloud-carbon-footprint/common
 
+## 1.8.0
+
+### Minor Changes
+
+- ab88688e: Aggregate footprint estimates for AWS resources by tags.
+
+### Patch Changes
+
+- 225e44c5: Correctly calculate period end date when the local timezone switched into or out of DST during the period
+
 ## 1.7.0
 
 ### Minor Changes

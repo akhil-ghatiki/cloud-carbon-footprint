@@ -1,5 +1,17 @@
 # @cloud-carbon-footprint/on-premise
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated dependencies [518c63d0]
+- Updated dependencies [ab88688e]
+- Updated dependencies [606f453f]
+- Updated dependencies [bc638bab]
+- Updated dependencies [225e44c5]
+  - @cloud-carbon-footprint/core@0.17.0
+  - @cloud-carbon-footprint/common@1.8.0
+
 ## 0.1.0
 
 ### Minor Changes
