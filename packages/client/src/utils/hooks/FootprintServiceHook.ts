@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { equals } from 'ramda'
 import axios from 'axios'
 
-import { EstimationResult } from '@cloud-carbon-footprint/common'
+import { EstimationResult,Logger } from '@cloud-carbon-footprint/common'
 
 import { useAxiosErrorHandling } from '../../layout/ErrorPage'
 import { ServiceResult } from '../../Types'
@@ -24,6 +24,8 @@ export interface UseRemoteFootprintServiceParams {
   groupBy?: string
   limit?: number
 }
+
+const footPrintServiceHookLogger = new Logger('footPrintServiceHook')
 
 const useRemoteFootprintService = (
   params: UseRemoteFootprintServiceParams,
@@ -74,6 +76,7 @@ const useRemoteFootprintService = (
           skip += params.limit
         }
       } catch (e) {
+        footPrintServiceHookLogger.error(e.message, e)
         setError(e)
       } finally {
         setData(estimates)

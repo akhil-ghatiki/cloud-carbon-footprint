@@ -1,5 +1,17 @@
 # @cloud-carbon-footprint/client
 
+## 3.3.0
+
+### Minor Changes
+
+- 9f760dd8: Set default value 'day' for GROUP_BY config parameter
+
+### Patch Changes
+
+- Updated dependencies [ab88688e]
+- Updated dependencies [225e44c5]
+  - @cloud-carbon-footprint/common@1.8.0
+
 ## 3.2.0
 
 ### Minor Changes

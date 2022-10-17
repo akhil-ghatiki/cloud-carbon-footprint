@@ -4,7 +4,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
-import { EmissionRatioResult } from '@cloud-carbon-footprint/common'
+import { EmissionRatioResult, Logger } from '@cloud-carbon-footprint/common'
 import { useAxiosErrorHandling } from '../../layout/ErrorPage'
 
 import { ServiceResult } from '../../Types'
@@ -13,6 +13,8 @@ interface UseRemoteEmissionServiceParams {
   baseUrl: string | null
   onApiError?: (e: Error) => void
 }
+const emissionFactorServiceHookLogger = new Logger('emissionFactorServiceHook')
+
 const useRemoteEmissionService = (
   params: UseRemoteEmissionServiceParams,
 ): ServiceResult<EmissionRatioResult> => {
@@ -40,6 +42,7 @@ const useRemoteEmissionService = (
           setData(res.data)
         }
       } catch (e) {
+        emissionFactorServiceHookLogger.error(e.message, e)
         setError(e)
       } finally {
         if (_isMounted.current) {
