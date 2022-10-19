@@ -1,5 +1,11 @@
 # @cloud-carbon-footprint/client
 
+## 3.4.0
+
+### Minor Changes
+
+- 81aac6a8: client error page and console now shows exact error message and detail
+
 ## 3.3.0
 
 ### Minor Changes
